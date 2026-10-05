@@ -35,7 +35,10 @@ cd Desafio-01-Target-Sistemas
 📋 Exemplo de Saída no Terminal
 Resultado das comissões:
 João Silva vendeu R$10754.70, e ficou com o total de 11279.96 com as comissoes
+
 Maria Souza vendeu R$9683.30, e ficou com o total de 10166.78 com as comissoes
+
 Carlos Oliveira vendeu R$7927.80, e ficou com o total de 8327.68 com as comissoes
+
 Ana Lima vendeu R$8763.95, e ficou com o total de 9211.83 com as comissoes
 
