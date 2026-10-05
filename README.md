@@ -1,4 +1,6 @@
 📊 Desafio Técnico: Cálculo de Comissões de Vendas
+
+
 Este projeto consiste em um script em Python desenvolvido para processar um conjunto de dados de vendas de uma equipe comercial, aplicando regras de comissão dinâmicas sobre cada transação e gerando um relatório consolidado com os ganhos de cada vendedor.
 
 🎯 Objetivo
