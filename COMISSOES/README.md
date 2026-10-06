@@ -1,45 +1,56 @@
-📊 Desafio Técnico: Cálculo de Comissões de Vendas
+🚀 Desafios Técnicos de Programação — Python
 
+Este repositório reúne as soluções desenvolvidas para um processo seletivo, compostas por três desafios práticos de processamento de dados, lógica de negócios e manipulação de estruturas na linguagem Python.
+-----------------------------------------------------------------------------
+💡 Sobre a Abordagem Técnica
 
-Este projeto consiste em um script em Python desenvolvido para processar um conjunto de dados de vendas de uma equipe comercial, aplicando regras de comissão dinâmicas sobre cada transação e gerando um relatório consolidado com os ganhos de cada vendedor.
+Todas as soluções foram implementadas utilizando recursos nativos do Python, sem dependências externas pesadas. O foco principal da resolução foi demonstrar domínio da lógica de programação e manipulação eficiente das estruturas de dados fundamentais da linguagem.
 
-🎯 Objetivo
-Ler uma estrutura de dados de vendas em formato JSON/Dicionário e calcular a comissão acumulada de cada funcionário com base no valor de cada venda individual.
+Principais Conceitos Aplicados:
 
-Faixa de Valor da Venda,% de Comissão
-"Abaixo de R$ 100,00",0% (Não gera comissão)
-"De R$ 100,00 até R$ 499,99 (Abaixo de R$ 500,00)",1%
-"R$ 500,00 ou mais",5%
+Dicionários (dict): Utilizados para busca rápida com complexidade $O(1)$, agrupamento de dados por chave (ex: totalização por vendedor) e modelagem de registros estruturados.
 
-🛠️ Tecnologias Utilizadas
-Python 3.x
+Listas (list) e Iterações (for / while): Empregadas para percorrer coleções de dados, realizar filtragens, aplicar regras condicionais por item e manter loops de interação com o usuári
 
-Estruturas de dados nativas: Dicionários (dict) e Listas (list).
+Tratamento e Validação de Dados: Implementação de verificações de consistência (ex: controle de saldo de estoque para evitar quantidades negativas, tratamento de IDs únicos e entradas do usuário).
 
-⚙️ Como Funciona o Algoritmo
-Mapeamento das Vendas: O script percorre cada item da lista de vendas.
+Estruturação da Regra de Negócio: Separação clara entre a entrada dos dados, o processamento lógico e a exibição de resultados formatados no console.
+-------------------------------------------------------------------------------
+⚙️ Resumo dos Desafios
+1. 📊 Cálculo de Comissões por Venda
+Objetivo: Processar uma coleção de vendas e calcular a comissão acumulada por vendedor.
 
-Cálculo da Comissão Individual: Verifica o valor da venda com estruturas condicionais (if / elif / else) para aplicar a porcentagem correspondente (0%, 1% ou 5%).
+Destaque Lógico: A comissão é calculada venda a venda conforme faixas de valor (0%, 1% ou 5%), e os resultados são agrupados dinamicamente em dicionários.
 
-Agrupamento por Vendedor: Utiliza dicionários em memória (vendas_totais e comissoes) para acumular o valor total vendido e a comissão acumulada de cada vendedor.
+2. 📦 Gestão e Movimentação de Estoque
+Objetivo: Sistema interativo para registrar entradas e saídas de mercadorias no depósito.
 
-Exibição do Relatório: Percorre o dicionário gerado e exibe no console o resumo por vendedor com formatação de moeda em duas casas decimais.
+Destaque Lógico: Validação de saldo disponível antes de autorizar retiradas, geração de identificador único por operação e manutenção de histórico acumulado em memória.
 
-🚀 Como Executar o Projetos
-Pré-requisitos: Certifique-se de ter o Python 3 instalado em sua máquina.
+3. 📅 Cálculo de Juros por Atraso (03-calculo-juros)
+Objetivo: Calcular o valor dos juros acumulados com base na data de vencimento e na data atual.
 
-Clonar/Baixar o código:
-https://github.com/VictorCardozzo/Desafio-01-Target-Sistemas.git
-cd Desafio-01-Target-Sistemas
+Regra de Negócio:
 
-📋 Exemplo de Saída no Terminal
-Resultado das comissões:
+Aplicação de multa/juros de 2,5% ao dia sobre o valor original em caso de atraso.
 
-João Silva vendeu R$10754.70, e ficou com o total de 11279.96 com as comissoes
+Isenção de cobrança caso o título esteja em dia.
 
-Maria Souza vendeu R$9683.30, e ficou com o total de 10166.78 com as comissoes
+Destaque de Lógica: Conversão de texto para objeto datetime com strptime(), cálculo do intervalo em dias (.days) e aplicação proporcional da taxa.
+-------------------------------------------------------------------------------
 
-Carlos Oliveira vendeu R$7927.80, e ficou com o total de 8327.68 com as comissoes
+1. 📊 Cálculo de Comissões (01-calculo-comissoes)
 
-Ana Lima vendeu R$8763.95, e ficou com o total de 9211.83 com as comissoes
+O que faz: Lê uma lista de vendas, calcula a comissão individual de cada transação e agrupa os totais por vendedor.
+
+Como foi feito:
+
+Iteramos sobre a lista de dicionários contendo cada venda.
+
+Para cada venda, aplicamos uma condicional if/elif/else para identificar a faixa de valor e calcular a comissão daquela transação específica
+
+Foi usado dois dicionários acumuladores (vendas_totais e comissoes) com a chave sendo o nome do vendedor. Verificamos se o vendedor já existe no dicionário para somar ao saldo anterior (+=) ou criá-lo com o primeiro valor.
+
+Por fim, percorremos o dicionário consolidado para exibir o total vendido e a comissão acumulada de cada um.
+
 
